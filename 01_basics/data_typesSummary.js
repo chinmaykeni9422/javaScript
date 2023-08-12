@@ -62,3 +62,28 @@ String name = "John"; // name is a variable of type String
 JavaScript's dynamic typing allows for more flexibility but can lead to potential runtime errors if not handled carefully. Static typing, on the other hand, provides better type safety at the cost of some initial verbosity and strictness.
 
 */
+
+//+++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+
+// stack (primitive) , Heap (non-primitive)
+
+let myLeetCodeNmae = "chinmaykeni9422" ; 
+
+let anotherName = myLeetCodeNmae ;
+
+anotherName = "chinmayKeni" ;
+
+console.log(myLeetCodeNmae) ;
+console.log(anotherName);
+
+let userOne={
+    email: "user@google.com",
+    upi: "user@ybl"
+}
+
+let userTwo = userOne ;
+
+userTwo.email =  "chinmay@google.com" ;
+
+console.log(userOne) ;
+console.log(userTwo) ;
