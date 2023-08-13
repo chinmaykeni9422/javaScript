@@ -47,6 +47,6 @@ let newDate = new Date() ;
 
 
 //---------------------------------------------------------
-newDate.toLocaleString('default'{
+newDate.toLocaleString('default',{
     weekday : "long"
 })
