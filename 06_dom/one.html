@@ -13,13 +13,30 @@
 </head>
 <body class="bg-black">
     <div>
-        <h id="title" class="heading">DOM learning on Chai aur Code <span style="display: none;">test code</span></h>
+        
+        <h1 id="title" class="heading">DOM learning on Chai aur Code <span style="display: none;">test code</span></h1>
+
+        <h2>Lorem ipsum dolor sit amet. 1</h2>
+        <h2>Lorem ipsum dolor sit amet. 2</h2>
+        <h2>Lorem ipsum dolor sit amet. 3</h2>
+        
         <p>Lorem ipsum dolor sit amet.</p>
+
+        <ul>
+            <li class="item">one</li>
+            <li class="item">two</li>
+            <li class="item">three</li>
+            <li class="item">four</li>
+        </ul>
+
     </div>
 
     <script>
 
         /*
+
+        *** NOTE => to check which property we can apply on a any structure we have to check 'prototype' of that structure  ***
+
         const title = document.getElementById('title') ;
 
         //textContent will show all the texts even if it's hidden due to any CSS property being applied to the text.
@@ -30,6 +47,46 @@
 
         // innerHTML will show The text content of the element, including all spacing and inner HTML tags.
         title.innerHTML  => output -> DOM learning on Chai aur Code <span style="display: none;">test code</span>
+        */
+
+        /*
+
+        // query selector
+
+            **
+            The 'querySelector()' method returns the first element that matches a CSS selector.
+            To return all matches (not only the first), use the 'querySelectorAll()' instead.
+
+            **
+
+           // there are various query selctor like 
+            1) getElementById
+            1) getElementByclass
+            2) getElementBytagName
+            3) getElementById
+        
+            // but we use more this 
+            ** querySelector() **
+            querySelector('.classname') => to acces class
+            querySelector('#idName') => to acces id
+            querySelector('tag name') => to acces tag 
+
+            // you can also select childs in tag 
+
+
+            // querySelectorAll() returns the list of node (nodelist) which have some similar property like array 
+            but nodelist is not same like array
+
+
+            // getElementsByClassName() ==> it returns HTMLCollection
+            //The getElementsByClassName() and getElementsByTagName() methods return a live HTMLCollection.
+            * we cannot use forEach() loop on HTMLcollection so therfore if we want to travel through HTMLcollection 
+            then we have to convert it into array first then we can travell *
+
+            * how to convert HTMLcollection and nodelist into array *
+            Array.from(HTMLcollection_name) ;
+
+
         */
 
     </script>
