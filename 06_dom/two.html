@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM study</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    <div class="parent">
+        <div class="day">Monday</div>
+        <div class="day">Tuesday</div>
+        <div class="day">Wensday</div>
+        <div class="day">thursday</div>
+    </div>
+
+    <script>
+
+        const parent = document.querySelector('.parent') ;
+        //console.log(parent) ;
+
+        //children prperty => gives childern of parent element (return HTMLcollection)
+        //console.log(parent.children) ;
+
+        //to accces the element in HTMLcollection
+        //console.log(parent.children[3].innerHTML) //cuz it have some similar property like array like 
+
+        //forEach() loop are not applicable on HTMLcollection but normal for loop will work on HMTLcollection;
+        // for (let i = 0; i < parent.children.lenght; i++) {
+        //     console.log(parent.children[i].innerHTML) ;   
+        // }
+
+
+        // applying forEach() by converting into array 
+        // const myArr = Array.from(parent.children) ;
+        // myArr.forEach((item) => {
+        //     console.log(item.innerHTML) ;
+        // }) ;
+
+
+        //* firstElementChild  => gives first child element of parent element
+        // console.log(parent.firstElementChild) ;
+
+        //* lastElementChild  => gives last child element of parent element
+        // console.log(parent.lastElementChild) ;
+
+
+        const day_1 = document.querySelector('.day') ;
+        // console.log(day_1.innerHTML) ; 
+
+        // child to parent 
+        // console.log(day_1.parentElement) ;
+
+        // child to next child 
+        // console.log(day_1.nextElementSibling.innerHTML)
+
+
+        // to calculate child node in parent element
+        /* 16:00 Important discussion about NodeList. A nodelist is a 
+        collection of document nodes which includes text nodes , 
+        attribute nodes and element nodes. A line break is  also 
+        counted in nodelist but only first one. All subsequent line
+         breaks are ignored by browser */
+        console.log('NODES :' ,parent.childNodes) ;
+
+    </script>
+</body>
+</html>
