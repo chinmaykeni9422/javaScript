@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM STUDY</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+
+    <ul class="language">
+        <li>Javascript</li>
+    </ul>
+
+    <script>
+
+        // unoptimize approch 
+        /*
+        const addLanguage = (langName) => {
+            const li = document.createElement("li") ;
+            li.innerHTML = langName ;
+            document.querySelector(".language").appendChild(li) 
+        } ;
+        */
+
+        // optimize approch 
+        const addLanguage = (langName) => {
+            const li = document.createElement("li") ;
+            const textNode = document.createTextNode(langName) ;
+            document.querySelector(".language").appendChild(li).appendChild(textNode) ;
+        } ;
+
+        addLanguage("cpp") ;
+        addLanguage("python") ;
+        addLanguage("java") ;
+
+
+        // edit value  (replaceWith())
+        const secondLang = document.querySelector("li:nth-child(2)") ;
+        const li = document.createElement("li") ;
+        const textNode = document.createTextNode("golang") ;
+        const newLi = li.appendChild(textNode) ;
+        secondLang.replaceWith(newLi) ;
+
+        // another edit
+        const firstLang = document.querySelector("li:first-child") ;
+        firstLang.outerHTML = "<li>Typescript</li>" 
+
+
+        // remove method
+        const lastLang = document.querySelector("li:last-child") ;
+        lastLang.remove() ;
+
+
+    </script>
+    
+</body>
+</html>
