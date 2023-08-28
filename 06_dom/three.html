@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM STUDY</title>
+</head>
+<body style="background-color: #212121; color: #fff;">
+    
+    <script>
+
+        // creating element in DOM
+        const div = document.createElement('div') ;
+        console.log(div) ;
+
+        // creating class in div element 
+        div.className = 'parent' ; 
+
+        // creating Id in div element 
+        div.id = 'myId' ; 
+
+        // to set other attribute or custom atrribute
+        div.setAttribute('title','DOM') ;
+
+        // how to style them 
+        div.style.backgroundColor = 'red' ;
+        div.style.padding = '12px' ;
+
+        // additng text into div element (approch 1)
+        /*
+            this method is good but it overrides the previous value 
+            therfore it is not optimize approch 
+        */
+      //↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ ↓ 
+      // div.innerHTML = "heyy!! chinmay" ;
+       
+       // additng text into div element (approch 2)
+       const textNode = document.createTextNode("hey chinmay 2")
+       div.appendChild(textNode) ;
+
+       // how to attach div element on document (in simple words how to show text and styling of div element on web page)
+       document.body.appendChild(div) ;
+
+
+    </script>
+
+</body>
+</html>
